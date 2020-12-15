@@ -2,7 +2,7 @@ import React from "react";
 import theme from "theme";
 import { Theme, Link, Text } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
-import { Section } from "@quarkly/components";
+import { Override, Section } from "@quarkly/components";
 import * as Components from "components";
 export default (() => {
 	return <Theme theme={theme}>
@@ -34,7 +34,53 @@ export default (() => {
 			>
 				The smartest people work every day to provide the best service and to make our clients happy
 			</Text>
-			<Components.EmployeeTable />
+			<Components.EmployeeTable>
+				<Override slot="employeeCard">
+					<Override slot="Name" font="500 24px/33.6px -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif" color="--primary" margin="4px 0px 16px 0px" />
+					<Override slot="Home Address" />
+					<Override slot="box" margin="0px 0px 0px 0px" />
+					<Override
+						slot="Email address"
+						text-decoration-line="initial"
+						color="--light"
+						text-align="center"
+						background="--color-grey"
+						padding="6px 0px 7px 0px"
+						border-radius="12px"
+						hover-background="--color-greyD2"
+						transition="background --transitionDuration-fastest --transitionTimingFunction-easeInOut 0s"
+					/>
+					<Override
+						slot="Phone"
+						text-decoration-line="initial"
+						color="--light"
+						text-align="center"
+						background="--color-grey"
+						padding="6px 0px 7px 0px"
+						border-radius="12px"
+						hover-background="--color-greyD2"
+						transition="background --transitionDuration-fastest --transitionTimingFunction-easeInOut 0s"
+						margin="0px 0px 16px 0px"
+					/>
+					<Override
+						slot="Title"
+						margin="2px 0px 0px 0px"
+						font="300 12px/24px -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif"
+						text-transform="uppercase"
+						letter-spacing="1px"
+						color="--grey"
+					/>
+					<Override
+						slot="Status"
+						margin="12px 0px 8px 0px"
+						background="--color-lightD2"
+						padding="4px 8px 6px 8px"
+						text-align="center"
+						border-radius="20px"
+					/>
+					<Override slot="DOB" margin="0px 0px 16px 0px" />
+				</Override>
+			</Components.EmployeeTable>
 		</Section>
 		<Link
 			font={"--capture"}

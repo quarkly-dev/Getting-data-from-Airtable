@@ -8,7 +8,8 @@ const overrides = {};
 
 const EmployeeTable = props => {
 	const {
-		rest
+		rest,
+		override
 	} = useOverrides(props, overrides, defaultProps);
 	const [employees, setEmployees] = useState([]);
 	useEffect(() => {
@@ -21,7 +22,7 @@ const EmployeeTable = props => {
 		}) => fields)));
 	}, []);
 	return <Stack {...rest}>
-		{employees.map(employee => <EmployeeCard employee={employee} />)}
+		{employees.map(employee => <EmployeeCard {...override("employeeCard")} employee={employee} />)}
 	</Stack>;
 };
 

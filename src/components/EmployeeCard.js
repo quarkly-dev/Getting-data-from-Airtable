@@ -82,11 +82,12 @@ const EmployeeCard = props => {
 	return <StackItem {...rest}>
 		<Override slot="StackItemContent" flex-direction="column" />
 		<Box {...override("box")} background-image={`url(${employee.Photo[0].url})`} />
-		<Text {...override("Name")} children={employee.Name} />
-		<Text {...override("Home Address")} children={employee["Home address"]} />
-		<Text {...override("Start date")} children={employee["Start date"]} />
 		<Text {...override("Status")} children={employee["Status"]} />
-		<Text {...override("DOB")} children={employee["DOB"]} />
+		<Text {...override("Title")} children={employee.Title} />
+		<Text {...override("Name")} children={employee.Name} />
+		<Text {...override("Home Address")} children={`Address: ${employee["Home address"]}`} />
+		<Text {...override("Start date")} children={`Start date: ${employee["Start date"]}`} />
+		<Text {...override("DOB")} children={`Birthday: ${employee["DOB"]}`} />
 		<Link {...override("Email address")} children={employee["Email address"]} href={`mailto:${employee["Email address"]}`} />
 		<Link {...override("Phone")} children={employee["Phone"]} href={`tel:${employee["Phone"]}`} />
 	</StackItem>;
