@@ -39,7 +39,6 @@ export default (() => {
 			<Components.EmployeeTable>
 				<Override slot="employeeCard">
 					<Override slot="Name" font="500 24px/33.6px -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif" color="--primary" margin="4px 0px 16px 0px" />
-					<Override slot="Home Address" />
 					<Override slot="box" margin="0px 0px 0px 0px" />
 					<Override
 						slot="Email address"
