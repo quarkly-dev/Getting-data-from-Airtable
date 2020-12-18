@@ -73,7 +73,6 @@ const overrides = {
 const EmployeeCard = props => {
 	const {
 		override,
-		children,
 		rest
 	} = useOverrides(props, overrides, defaultProps);
 	const {
